@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Paradise Nursery Design System - Natural & Botanical Theme */
+
+@layer base {
+  :root {
+    /* Base colors */
+    --background: 45 15% 98%;
+    --foreground: 140 15% 15%;
+
+    /* Card system */
+    --card: 0 0% 100%;
+    --card-foreground: 140 15% 15%;
+
+    /* Popover */
+    --popover: 0 0% 100%;
+    --popover-foreground: 140 15% 15%;
+
+    /* Paradise Green Palette */
+    --primary: 142 60% 25%;
+    --primary-foreground: 45 15% 98%;
+    --primary-light: 142 50% 35%;
+    --primary-glow: 142 70% 45%;
+
+    /* Natural Secondary */
+    --secondary: 45 25% 92%;
+    --secondary-foreground: 140 15% 15%;
+
+    /* Earth tones */
+    --muted: 35 20% 90%;
+    --muted-foreground: 140 10% 45%;
+
+    /* Botanical accent */
+    --accent: 120 40% 88%;
+    --accent-foreground: 140 20% 20%;
+
+    /* Actions */
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Borders and inputs */
+    --border: 142 20% 85%;
+    --input: 142 15% 90%;
+    --ring: 142 60% 25%;
+
+    /* Design tokens */
+    --radius: 0.75rem;
+
+    /* Custom gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
+    --gradient-card: linear-gradient(180deg, hsl(var(--card)), hsl(var(--accent)));
+    --gradient-button: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px hsl(var(--primary) / 0.1);
+    --shadow-card: 0 8px 25px hsl(var(--primary) / 0.15);
+    --shadow-glow: 0 0 30px hsl(var(--primary-glow) / 0.3);
+
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 142 15% 8%;
+    --foreground: 45 15% 95%;
+
+    --card: 142 10% 12%;
+    --card-foreground: 45 15% 95%;
+
+    --popover: 142 10% 12%;
+    --popover-foreground: 45 15% 95%;
+
+    --primary: 142 70% 45%;
+    --primary-foreground: 142 15% 8%;
+    --primary-light: 142 60% 55%;
+    --primary-glow: 142 80% 65%;
+
+    --secondary: 142 8% 20%;
+    --secondary-foreground: 45 15% 95%;
+
+    --muted: 142 5% 18%;
+    --muted-foreground: 45 8% 65%;
+
+    --accent: 142 15% 25%;
+    --accent-foreground: 45 15% 95%;
+
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 142 10% 25%;
+    --input: 142 8% 20%;
+    --ring: 142 70% 45%;
+    
+    --sidebar-background: 142 15% 8%;
+    --sidebar-foreground: 45 15% 95%;
+    --sidebar-primary: 142 70% 45%;
+    --sidebar-primary-foreground: 142 15% 8%;
+    --sidebar-accent: 142 8% 20%;
+    --sidebar-accent-foreground: 45 15% 95%;
+    --sidebar-border: 142 10% 25%;
+    --sidebar-ring: 142 70% 45%;
+
+    /* Dark mode gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
+    --gradient-card: linear-gradient(180deg, hsl(var(--card)), hsl(var(--accent)));
+    --gradient-button: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+
+    /* Dark mode shadows */
+    --shadow-soft: 0 4px 20px hsl(var(--primary) / 0.2);
+    --shadow-card: 0 8px 25px hsl(var(--primary) / 0.25);
+    --shadow-glow: 0 0 30px hsl(var(--primary-glow) / 0.4);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+}
